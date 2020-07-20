@@ -8,6 +8,12 @@
 #include <string.h>
 #include <stdarg.h>
 
+typedef struct t_type
+{
+	char *type;
+	void (*print)(va_list);
+} f_types;
+
 /* Prototypes */
 
 int _putchar(char c);
