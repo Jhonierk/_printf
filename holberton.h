@@ -27,7 +27,10 @@ typedef struct t_types
 
 /* Prototypes */
 
-int _putchar(char c);
+int _putchar(char c*, int len_buffer);
 int _printf(const char *format, ...);
+int print_char(va_list arg);
+int print_string(va_list arg);
+int print_percent(char *percent, char *buff);
 
 #endif /* HOLBERTON */
