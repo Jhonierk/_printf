@@ -55,3 +55,64 @@ int print_percent(char *percent, char *buff)
 	_putchar(buff, '%');
 	return (1);
 }
+
+/**
+ * print_integer - Prints a integers.
+ * @arg: Arguments.
+ *
+ * Return: The value of _int.
+ */
+int print_integer(va_list arg)
+{
+	int _num, i, n, k, _integer;
+
+	k = 1;
+	_integer = 0;
+	n = va_arg(arg, int);
+	_num = n;
+
+	if (n < 0)
+	{
+		k = k * -1;
+		_puts('_');
+		_integer++;
+	}
+	while (_num > 9 || _num < -9)
+	{
+		_num = _num / 10;
+		k = k * 10;
+	}
+	while (k > 9 || k < -9)
+	{
+		i = (n / k) % 10;
+		_puts(i + '0');
+		k = k / 10;
+		_integer++;
+	}
+	if (n < 0)
+	{
+		_puts((n % 10) * -1 + '0');
+		_integer++;
+	}
+	else
+	{
+		_puts(n % 10 + '0');
+		_integer++;
+	}
+	return (_integer);
+}
+
+/**
+ * print_decimal - Prints decimal numbers.
+ * @arg: Arguments.
+ *
+ * Return: Number of character.
+ */
+int print_decimal(va_list arg)
+{
+	int dec;
+
+	dec = print_decimal(arg);
+
+	return (dec);
+}
