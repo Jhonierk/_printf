@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[count + 1] != '%')
 			{
-				fmtout = get_format(format[count + 1]);
+				fmtout = _formats(format[count + 1]);
 
 				if (fmtout)
 				{
@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 		{
 			write(1, &format[count], 1), len_count++;
 		}
-	    posit_fmt++
+	    posit_fmt++;
 	}
 	va_end(list);
 	return (len_count);
