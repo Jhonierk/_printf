@@ -11,7 +11,6 @@
 char *_conect_char(char *connetc, char *src)
 {
 	int post_connect = 0, pos_src = 0;
-	
 	while(connetc[post_connect] != '\0')
 	{
 	    post_connect++;
