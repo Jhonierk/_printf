@@ -12,7 +12,7 @@ char *_conect_char(char *connetc, char *src)
 {
 	int post_connect = 0, pos_src = 0;
 	
-	while(connetc[post] != '\0';)
+	while(connetc[post_connect] != '\0')
 	{
 	    post_connect++;
 	}
@@ -77,7 +77,7 @@ int _strlen(char *s)
 	
 	while(s[x] != '\0')
 	{
-	    x++
+	    x++;
 	}
-	return (x)
+	return (x);
 }
