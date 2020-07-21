@@ -16,7 +16,7 @@ char *_conect_char(char *connetc, char *src)
 		post_connect++;
 	}
 	while (src[post_connect] != '\0')
-    	{
+	{
 		connetc[post_connect + pos_src] = src[pos_src];
 		pos_src++;
 	}
@@ -29,16 +29,16 @@ char *_conect_char(char *connetc, char *src)
  *
  * Return: pointer to the buffer.
  */
- void b_cleaner(char *b)
- {
-     int clean_b = 0;
-     
-     while (clean_b < 1023)
-     {
-         b[clean_b] = 0;
-         clean_b++;
-     }
- }
+void b_cleaner(char *b)
+{
+	int clean_b = 0;
+
+	while (clean_b < 1023)
+	{
+		b[clean_b] = 0;
+		clean_b++;
+	}
+}
 
 /**
  * _puts - writes the character c to stdout
@@ -71,10 +71,10 @@ void print_b(char *b, int len)
 int _strlen(char *s)
 {
 	int x = 0;
-	
+
 	while (s[x] != '\0')
 	{
-	    x++;
+		x++;
 	}
 	return (x);
 }
