@@ -6,10 +6,10 @@
  *
  * Return: Number of character.
  */
-
 int print_char(va_list arg)
 {
 	char c;
+	
 	c = va_arg(arg, int);
 
 	write(1, &c, 1);
@@ -25,7 +25,7 @@ int print_char(va_list arg)
 
 int print_string(va_list arg)
 {
-	char _string;
+	char *_string;
 	int size_string;
 
 	_string = va_arg(arg, char *);
@@ -33,7 +33,7 @@ int print_string(va_list arg)
 	if (_string == NULL)
 		_string = "(null)";
 
-	for (size_string = 0; _string != '\0'; size_string++)
+	for (size_string = 0; *_string != '\0'; size_string++)
 	{
 		write(1, _string, 1);
 		_string++;
