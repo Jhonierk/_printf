@@ -28,21 +28,26 @@ int _printf(const char *format, ...)
 
 				if (fmtout)
 				{
-					len_count += fmtout(list), count++;
+					len_count += fmtout(list);
+					count++;
 				}
 				else
 				{
-					write(1, &format[count], 1), len_count++;
+					write(1, &format[count], 1);
+					len_count++;
 				}
 			}
 			else
 			{
-				write(1, &format[count], 1), len_count++, count++;
+				write(1, &format[count], 1);
+				len_count++;
+				count++;
 			}
 		}
 		else
 		{
-			write(1, &format[count], 1), len_count++;
+			write(1, &format[count], 1);
+			len_count++;
 		}
 	    count++;
 	}
