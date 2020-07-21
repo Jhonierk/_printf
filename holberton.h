@@ -32,6 +32,8 @@ int (*_formats(char form))();
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_percent(char *percent, char *buff);
+int print_integer(va_list arg);
+int print_decimal(va_list arg);
 
 char *_conect_char(char *connetc, char *src);
 void b_cleaner(char *b);
