@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 		{
 			write(1, &format[count], 1), len_count++;
 		}
-	    posit_fmt++;
+	    count++;
 	}
 	va_end(list);
 	return (len_count);
