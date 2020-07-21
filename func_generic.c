@@ -13,16 +13,15 @@ char *_conect_char(char *connetc, char *src)
 	int post_connect = 0, pos_src = 0;
 	while(connetc[post_connect] != '\0')
 	{
-	    post_connect++;
+		post_connect++;
 	}
-    
-    while(src[post_connect] != '\0')
-    {
-        connetc[post_connect + pos_src] = src[pos_src];
-        pos_src++;
-    }
-    return (connetc);
 	
+	while(src[post_connect] != '\0')
+    	{
+		connetc[post_connect + pos_src] = src[pos_src];
+		pos_src++;
+	}
+	return (connetc);
 }
 
 /**
