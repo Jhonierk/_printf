@@ -33,4 +33,11 @@ int print_char(va_list arg);
 int print_string(va_list arg);
 int print_percent(char *percent, char *buff);
 
+char *_conect_char(char *connetc, char *src);
+void b_cleaner(char *b);
+int _puts(char c);
+void print_b(char *b, int len);
+int _strlen(char *s);
+
+
 #endif /* HOLBERTON */
