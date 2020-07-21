@@ -12,14 +12,12 @@ int _printf(const char *format, ...)
 	int count, len_count = 0;
 
 	if ((!format) || (format[0] == '%' && format[1] == '\0'))
-	{
 		return (-1);
-	}
 
 	va_start(arg, format);
-	
+
 	count = 0;
-	while(format[count] && format)
+	while (format[count] && format)
 	{
 		if (format[count] == '%')
 		{
@@ -28,15 +26,9 @@ int _printf(const char *format, ...)
 				fmtout = _formats(format[count + 1]);
 
 				if (fmtout)
-				{
-					len_count += fmtout(arg);
-					count++;
-				}
+					len_count += fmtout(arg), count++;
 				else
-				{
-					write(1, &format[count], 1);
-					len_count++;
-				}
+					write(1, &format[count], 1), len_count++;
 			}
 			else
 			{
