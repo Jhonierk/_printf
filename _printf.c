@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list list;
+	va_list arg;
 	int (*fmtout)();
 	int count, len_count = 0;
 
@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
-	va_start(list, format);
+	va_start(arg, format);
 	
 	count = 0;
 	while(format[count] && format)
@@ -52,6 +52,6 @@ int _printf(const char *format, ...)
 		}
 		count++;
 	}
-	va_end(list);
+	va_end(arg);
 	return (len_count);
 }
