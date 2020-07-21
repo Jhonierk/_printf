@@ -6,7 +6,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
 #include <stdarg.h>
 
@@ -29,6 +28,7 @@ typedef struct t_types
 
 int _putchar(char *c, int len_buffer);
 int _printf(const char *format, ...);
+int (*_formats(char form))();
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_percent(char *percent, char *buff);
