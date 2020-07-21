@@ -74,7 +74,7 @@ int print_integer(va_list arg)
 	if (n < 0)
 	{
 		k = k * -1;
-		_puts('_');
+		_puts('-');
 		_integer++;
 	}
 	while (_num > 9 || _num < -9)
@@ -112,7 +112,7 @@ int print_decimal(va_list arg)
 {
 	int dec;
 
-	dec = print_decimal(arg);
+	dec = print_integer(arg);
 
 	return (dec);
 }
