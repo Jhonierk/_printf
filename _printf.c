@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int (*fmtout)();
-	int count = 0, len_count = 0;
+	int count, len_count = 0;
 
 	if ((!format) || (format[0] == '%' && format[1] == '\0'))
 	{
@@ -18,8 +18,9 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 	
-	while(format[count] && format){
-
+	count = 0;
+	while(format[count] && format)
+	{
 		if (format[count] == '%')
 		{
 			if (format[count + 1] != '%')
@@ -49,7 +50,7 @@ int _printf(const char *format, ...)
 			write(1, &format[count], 1);
 			len_count++;
 		}
-	    count++;
+		count++;
 	}
 	va_end(list);
 	return (len_count);
