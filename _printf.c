@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 
 				if (fmtout)
 				{
-					len_count += fmtout(list);
+					len_count += fmtout(arg);
 					count++;
 				}
 				else
