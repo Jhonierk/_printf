@@ -7,7 +7,7 @@
  * Return: 0 (success).
  */
 
-int (*_formats(char *form))()
+int (*_formats(char form))()
 {
 	f_types op[] = {
 		{"c", print_char},
