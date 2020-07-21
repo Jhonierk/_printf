@@ -13,6 +13,8 @@ int (*_formats(char form))()
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"i", print_integer},
+		{"d", print_decimal},
 		{NULL, NULL}
 	};
 	int runs_op;
